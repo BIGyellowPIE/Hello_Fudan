@@ -462,36 +462,38 @@ def get_account1():
 
 
 if __name__ == '__main__':
-    uid, psw = get_account()
-    # print(uid, psw)
-    zlapp_login = 'https://uis.fudan.edu.cn/authserver/login?' \
-                  'service=https://zlapp.fudan.edu.cn/site/ncov/fudanDaily'
-    code_url = "https://zlapp.fudan.edu.cn/backend/default/code"
-    
-    print("当前脚本执行时间：", time.ctime())
-    daily_fudan = Zlapp(uid, psw,
-                        url_login=zlapp_login, url_code=code_url)
-    daily_fudan.login()
+    while True:
+        uid, psw = get_account()
+        # print(uid, psw)
+        zlapp_login = 'https://uis.fudan.edu.cn/authserver/login?' \
+                      'service=https://zlapp.fudan.edu.cn/site/ncov/fudanDaily'
+        code_url = "https://zlapp.fudan.edu.cn/backend/default/code"
 
-    daily_fudan.check()
-    daily_fudan.checkin()
-    # 再检查一遍
-    daily_fudan.check()
-    daily_fudan.close(1)
-    
-    uid, psw = get_account1()
-    # print(uid, psw)
-    zlapp_login = 'https://uis.fudan.edu.cn/authserver/login?' \
-                  'service=https://zlapp.fudan.edu.cn/site/ncov/fudanDaily'
-    code_url = "https://zlapp.fudan.edu.cn/backend/default/code"
-    
-    print("当前脚本执行时间：", time.ctime())
-    daily_fudan1 = Zlapp1(uid, psw,
-                        url_login=zlapp_login, url_code=code_url)
-    daily_fudan1.login()
+        print("当前脚本执行时间：", time.ctime())
+        daily_fudan = Zlapp(uid, psw,
+                            url_login=zlapp_login, url_code=code_url)
+        daily_fudan.login()
 
-    daily_fudan1.check()
-    daily_fudan1.checkin()
-    # 再检查一遍
-    daily_fudan1.check()
-    daily_fudan1.close(1)
+        daily_fudan.check()
+        daily_fudan.checkin()
+        # 再检查一遍
+        daily_fudan.check()
+        daily_fudan.close(1)
+
+        uid, psw = get_account1()
+        # print(uid, psw)
+        zlapp_login = 'https://uis.fudan.edu.cn/authserver/login?' \
+                      'service=https://zlapp.fudan.edu.cn/site/ncov/fudanDaily'
+        code_url = "https://zlapp.fudan.edu.cn/backend/default/code"
+
+        print("当前脚本执行时间：", time.ctime())
+        daily_fudan1 = Zlapp1(uid, psw,
+                            url_login=zlapp_login, url_code=code_url)
+        daily_fudan1.login()
+
+        daily_fudan1.check()
+        daily_fudan1.checkin()
+        # 再检查一遍
+        daily_fudan1.check()
+        daily_fudan1.close(1)
+        break
