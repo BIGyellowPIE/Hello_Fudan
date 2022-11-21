@@ -269,7 +269,7 @@ class Mail1:
         self.mail_host = "smtp.qq.com"  # qq邮箱服务器
         self.mail_pass = "kshwghsboixkdibb"  # 授权码
         self.sender = 'niequanxin@qq.com'  # 发送方邮箱地址
-        self.receivers = ['1040391342@qq.com']  # 收件人的邮箱地址
+        self.receivers = ['929902277@qq.com']  # 收件人的邮箱地址
 
     def send(self):
         content = '最爱🧣的🫓已经帮忙打卡成功啦！\n现在是北京时间：{} 一直在很喜欢很喜欢很喜欢你哦～n'.format(time.ctime())
