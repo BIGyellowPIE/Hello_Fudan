@@ -268,8 +268,8 @@ def get_account():
     """
     获取账号信息
     """
-    uid = getenv("STD_ID")
-    psw = getenv("PASSWORD")
+    uid = getenv("STD_ID1")
+    psw = getenv("PASSWORD1")
     if uid != None and psw != None:
         print("从环境变量中获取了用户名和密码！")
         return uid, psw
