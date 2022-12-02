@@ -29,4 +29,3 @@ jobs:
       - name: run
         run: |
           STD_ID='${{ secrets.STD_ID }}' PASSWORD='${{ secrets.PASSWORD }}' python3 main.py
-          STD_ID1='${{ secrets.STD_ID1 }}' PASSWORD1='${{ secrets.PASSWORD1 }}' python3 main1.py
